@@ -1,0 +1,66 @@
+.tc-overlay {
+	position	: absolute 	!important;
+	z-index		: 999999999 !important;
+	background	: red 		!important;
+	opacity		: 0.5 		!important;
+	cursor		: pointer	!important;
+	margin-right: 0			!important;
+	margin-bottom: 0		!important;
+	padding		: 0			!important;
+	text-align	: center	!important;
+	color		: white		!important;
+	font-size	: 12px		!important;
+	font-family	: Arial		!important;
+	pointer-events: auto	!important;
+}
+
+.tc-overlay:hover {
+	background	: #F66 		!important;
+	opacity		: 0.7 		!important;
+}
+
+.tc-show {
+	clip		: auto		!important;
+}
+
+.tc-show *:not(.tc-show) {
+	visibility	: hidden 	!important;
+}
+
+.tc-subtle *:not(.tc-show) {
+	visibility	: hidden 	!important;
+	position	: absolute	!important;
+	left		: 9999px	!important;
+}
+
+html.tc-show, body.tc-show {
+	position	: relative	!important;
+	overflow	: hidden 	!important;
+}
+
+#tc-html5-controls-hover-container {
+	pointer-events: auto	!important;
+}
+
+#tc-html5-controls-hover-container div {
+	visibility: hidden;
+}
+
+#tc-html5-controls-hover-container:hover div {
+	visibility: visible;
+}
+
+#tc-html5-controls-hover-container input[type='range'] {
+	-webkit-appearance: none !important;
+	appearance: none !important;
+	cursor: pointer;
+}
+
+#tc-html5-controls-hover-container input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+	appearance: none !important;
+    width: 10px;
+    height: 20px;
+    background: white;
+	cursor: pointer;
+}
