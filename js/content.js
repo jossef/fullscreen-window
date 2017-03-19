@@ -542,15 +542,13 @@ function initializeTabCinema() {
                 // make sure element remains visible
                 el.classList.add('tc-show');
 
-                // maximize all parents if in subtle mode
-                //if (this.target.subtle) {
-                    el.classList.add('tc-subtle');
-                    if (typeof el['originalStyle'] === "undefined") {
-                        el['originalStyle'] = el.getAttribute('style') || '';
-                    }
-                    // append style rather than replacing it, in case element has inline properties that might trigger reload when removed (e.g. position)
-                    el.setAttribute("style", el['originalStyle'] + this.inlineStyleSubtle);
-                //}
+                // maximize all parents without being subtle
+                el.classList.add('tc-subtle');
+                if (typeof el['originalStyle'] === "undefined") {
+                    el['originalStyle'] = el.getAttribute('style') || '';
+                }
+                // append style rather than replacing it, in case element has inline properties that might trigger reload when removed (e.g. position)
+                el.setAttribute("style", el['originalStyle'] + this.inlineStyleSubtle);
 
                 // move up one level
                 el = el.parentNode;
@@ -659,11 +657,9 @@ function initializeTabCinema() {
                 el.classList.remove('tc-show');
 
                 // restore css
-                //if (this.target.subtle) {
-                    el.classList.remove('tc-subtle');
-                    el.setAttribute('style', el['originalStyle']);
-                    el.removeAttribute('originalStyle');
-                //}
+                el.classList.remove('tc-subtle');
+                el.setAttribute('style', el['originalStyle']);
+                el.removeAttribute('originalStyle');
 
                 // move up one level
                 el = el.parentNode;
