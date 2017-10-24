@@ -1,5 +1,5 @@
 {
-   "author": "Arno van den Brink, Jossef Harus",
+   "author": "Arno van den Brink, Jossef Harus, Jake Howard",
    "background": {
       "persistent": false,
       "scripts": [ "js/background.js" ]
