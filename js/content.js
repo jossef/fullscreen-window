@@ -460,7 +460,7 @@ function initializeTabCinema() {
 
                     // hide standard controls and add custom HTML5 controls to circumvent click handler issues
                     if (!this.target.isYTHTML5) {
-                        this.target.subtle = false;
+                        this.target.subtle = true;
                         this.target.controls = this.target.DOMnode.controls;
                         this.target.DOMnode.controls = false;
                         this.target.customControls = this.createHTML5Controls(this.target.DOMnode);
